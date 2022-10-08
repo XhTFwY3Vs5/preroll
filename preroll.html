@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h2 
+{ 
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+table 
+{
+    border: 1px solid black;
+    width: 95%;
+    text-align: center;
+}
+td
+{
+    border: 1px solid black;
+    padding: 1px;
+    margin: 10px;
+}
+</style>
+</head>
+
+<body>
+<h2>d20</h2>
+<table id="d20" border=1></table>
+<br />
+<h2>d4</h2>
+<table id="d4" border=1></table>
+<br />
+<h2>d6</h2>
+<table id="d6" border=1></table>
+<br />
+<h2>d8</h2>
+<table id="d8" border=1></table>
+<br />
+<p style="page-break-before: always">
+<h2>d10</h2>
+<table id="d10" border=1></table>
+<br />
+<h2>d12</h2>
+<table id="d12" border=1></table>
+<br />
+<h2>d100</h2>
+<table id="d100" border=1></table>
+<br />
+
+<script>
+function buildTable(table, columns, rows, min, max) {
+    var tr = document.createElement("tr");
+    for (var rowCtr = 1; rowCtr <= rows; rowCtr++) {
+        for (var columnCtr = 1; columnCtr <= columns; columnCtr++) {
+           var num = Math.floor(Math.random() * (max - min + 1) + min);
+           var td = document.createElement("td");
+           td.innerHTML = num;
+           tr.appendChild(td);
+        }
+        table.appendChild(tr);
+        if (rowCtr < rows) {
+            tr = document.createElement("tr");
+        }
+    }
+}
+
+var rows = 16;
+var columns = 40;
+buildTable(document.getElementById("d20"), columns, rows, 1, 20);
+rows = 8;
+buildTable(document.getElementById("d4"), columns, rows, 1, 4);
+buildTable(document.getElementById("d6"), columns, rows, 1, 6);
+buildTable(document.getElementById("d8"), columns, rows, 1, 8);
+rows = 15;
+buildTable(document.getElementById("d10"), columns, rows, 1, 10);
+buildTable(document.getElementById("d12"), columns, rows, 1, 12);
+buildTable(document.getElementById("d100"), columns, rows, 1, 100);
+</script>
+</body>
+</html>
