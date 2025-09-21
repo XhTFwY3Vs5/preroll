@@ -1,4 +1,3 @@
-```markdown
 # RPG Dice Roll Pre-generator
 
 This simple HTML file pre-generates a large number of dice rolls for various common RPG dice types (d4, d6, d8, d10, d12, d20, d100). It's designed to be printed or viewed offline, providing a readily available pool of random numbers for your tabletop role-playing games.
@@ -41,7 +40,6 @@ var rows = 10;
 var columns = 20;
 // ... (and later)
 rows = 10; // Keep the same number of rows for d20 and d100 if desired
-```
 
 ## Disclaimer
 
