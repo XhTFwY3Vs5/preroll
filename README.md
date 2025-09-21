@@ -40,8 +40,7 @@ var rows = 10;
 var columns = 20;
 // ... (and later)
 rows = 10; // Keep the same number of rows for d20 and d100 if desired
-
+```
 ## Disclaimer
 
 While this tool provides a convenient way to pre-generate dice rolls, remember that true randomness is a complex topic. For critical game mechanics where strict statistical distribution is paramount, consider using dedicated dice rolling applications or physical dice. This tool is intended for convenience and quick access to a large pool of numbers.
-```
